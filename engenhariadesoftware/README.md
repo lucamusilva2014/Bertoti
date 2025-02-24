@@ -1,6 +1,8 @@
+"""
 1. Comentar com suas palavras o primeiro trecho do livro Software Engineering at Google, Oreilly.
 
-Diferentemente de programação que seria apenas a criação do código em si, a Engenharia de software é um pouco mais rigorosa onde devemos utilizar práticas e métodos baseados em conhecimentos teóricos para criar um processo mais confiável e preciso para a programação do software.
+Diferentemente de programação que seria apenas a criação do código em si, a Engenharia de software é um pouco mais rigorosa onde devemos utilizar práticas e métodos baseados em conhecimentos teóricos para criar um processo mais confiável e preciso para a programação do software."""
+
 
 2. Comentar com suas palavras o segundo trecho do livro Software Engineering at Google, Oreilly
 
