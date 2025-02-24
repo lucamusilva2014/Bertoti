@@ -16,3 +16,14 @@ Engenharia de Software pode ser considerado como programação integrada ao temp
 
 ## 5 JAVA
 ### Classe Cinema
+
+
+![Cinema](https://github.com/user-attachments/assets/b891af4d-af35-4d86-b37b-354c70af7aa1)
+
+### Classe Filme
+![Filme](https://github.com/user-attachments/assets/d1563138-093a-437c-bf55-8eb1332b3799)
+
+## 6 Teste Customizado
+
+![Teste_1](https://github.com/user-attachments/assets/11809d96-e81a-4a87-9be0-ffcb15e97638)
+
