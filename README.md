@@ -9,6 +9,12 @@ Engenharia de Software pode ser considerado como programação integrada ao temp
 
 ## 3. Listar e explicar 3 exemplos de tradeoffs
 
+- O SQLite melhora o desempenho ao manter dados locais, mas, ao longo do tempo, o código se torna mais complexo e difícil de atualizar, especialmente quando a base de dados cresce.
+-  Startups que utilizam o MVP que exige com poucos testes e validações, priorizando o custo e o tempo de desenvolvimento, mas isso aumenta o risco de bugs e falhas na qualidade.
+-  O Twitter começou com uma arquitetura monolítica. Com o crescimento, precisaram migrar para uma arquitetura de microsserviços. Isso permitiu maior escalabilidade, mas aumentou a complexidade na gestão e no desenvolvimento de novos recursos.
+
+
+
 ## 4. Classes UML
 
 ![UML_Cinema drawio](https://github.com/user-attachments/assets/47e09e50-0d12-4eef-8d26-c47756a6bef1)
