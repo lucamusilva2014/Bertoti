@@ -33,3 +33,103 @@ Engenharia de Software pode ser considerado como programação integrada ao temp
 
 ![Teste_1](https://github.com/user-attachments/assets/11809d96-e81a-4a87-9be0-ffcb15e97638)
 
+
+## 7 SQLITE
+### MAIN
+```java
+package org.example;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Main {
+
+    private static Cinema cinema = new Cinema();
+
+    public static void main(String[] args) {
+        cinema.conectar();
+        cinema.criarTabela();
+        cinema.addFilme("Vingadores", "001");
+        cinema.buscarTodos();
+    }
+}
+```
+### Cinema
+```java
+package org.example;
+
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Cinema {
+    private String url = "jdbc:sqlite:salacinema.db";
+
+    public Cinema() {
+    }
+
+    public void conectar() {
+        try (Connection conn = DriverManager.getConnection(this.url)) {
+            if (conn != null) {
+                DatabaseMetaData meta = conn.getMetaData();
+                System.out.println("The driver name is " + meta.getDriverName());
+                System.out.println("A new database has been created.");
+            }
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    public void criarTabela() {
+        String sql = "CREATE TABLE IF NOT EXISTS salacinema (" +
+                "id TEXT PRIMARY KEY," +
+                "filme TEXT NOT NULL);";
+
+        try (
+                Connection conn = DriverManager.getConnection(this.url);
+                Statement stmt = conn.createStatement()
+        ) {
+            stmt.execute(sql);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void addFilme(String filme, String id) {
+        String sql = "INSERT INTO salacinema(id, filme) VALUES('" + id + "', '" + filme + "')";
+        System.out.println(sql);
+
+        try (
+                Connection conn = DriverManager.getConnection(this.url);
+                Statement stmt = conn.createStatement()
+        ) {
+            stmt.execute(sql);
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    public void buscarTodos() {
+        String sql = "SELECT * FROM salacinema";
+
+        try (
+                Connection conn = DriverManager.getConnection(this.url);
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(sql)
+        ) {
+            System.out.println(rs);
+
+            while (rs.next()) {
+                System.out.println(rs.getString("id"));
+                System.out.println(rs.getString("filme"));
+            }
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+}
+
+```
