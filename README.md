@@ -81,26 +81,28 @@ public class Filme {
 ```java
 package org.example;
 
-public class Filme {
-    public Filme(String nome, String id) {
-        this.nome = nome;
-        this.id = id;
-    }
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome =nome;
-        
-    }
-    public String getId() {
-        return id;
-        
-    }
-    public void setId(String id) {
-        this.id=id;
-    }
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+class Teste {
+
+	@Test
+	void test() {
+		Cinema cinema = new Cinema();
+		cinema.addFilme(new Filme("Vingadores","1"));
+		
+		assertEquals(cinema.getFilmes().size(),1);
+		
+		List<Filme> filmesEncontrados = cinema.buscarFilmeNome("Vingadores");
+		
+		assertEquals(filmesEncontrados.get(0).getId(),"1");
+	}
+
 }
+
 ```
 
 ![Teste_1](https://github.com/user-attachments/assets/11809d96-e81a-4a87-9be0-ffcb15e97638)
