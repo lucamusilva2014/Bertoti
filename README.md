@@ -24,7 +24,32 @@ Engenharia de Software pode ser considerado como programação integrada ao temp
 ### Classe Cinema
 
 
-![Cinema](https://github.com/user-attachments/assets/b891af4d-af35-4d86-b37b-354c70af7aa1)
+```java
+package org.example;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Cinema {
+    private List<Filme> filmes = new LinkedList<Filme>();
+    public void addFilme(Filme filme) {
+       filmes.add(filme);
+    }
+public List<Filme> getFilmes(){
+        return filmes;
+}
+public List<Filme> getFilmes(){
+        return filmes;
+}
+public List<Filme> buscarFilmeNome (String nome) {
+    List<Filme> encontrados = new LinkedList<Filme>();
+    for (Filme filme : filmes) {
+        if (filme.getNome().equal(nome)) encontrados.add(filme);
+    }
+    return encontrados;
+}
+}
+
+```
 
 ### Classe Filme
 ![Filme](https://github.com/user-attachments/assets/d1563138-093a-437c-bf55-8eb1332b3799)
