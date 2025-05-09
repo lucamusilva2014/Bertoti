@@ -78,6 +78,30 @@ public class Filme {
 ```
 
 ## 6 Teste Customizado
+```java
+package org.example;
+
+public class Filme {
+    public Filme(String nome, String id) {
+        this.nome = nome;
+        this.id = id;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome =nome;
+        
+    }
+    public String getId() {
+        return id;
+        
+    }
+    public void setId(String id) {
+        this.id=id;
+    }
+}
+```
 
 ![Teste_1](https://github.com/user-attachments/assets/11809d96-e81a-4a87-9be0-ffcb15e97638)
 
