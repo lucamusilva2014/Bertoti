@@ -52,7 +52,30 @@ public List<Filme> buscarFilmeNome (String nome) {
 ```
 
 ### Classe Filme
-![Filme](https://github.com/user-attachments/assets/d1563138-093a-437c-bf55-8eb1332b3799)
+```java
+package org.example;
+
+public class Filme {
+    public Filme(String nome, String id) {
+        this.nome = nome;
+        this.id = id;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome =nome;
+        
+    }
+    public String getId() {
+        return id;
+        
+    }
+    public void setId(String id) {
+        this.id=id;
+    }
+}
+```
 
 ## 6 Teste Customizado
 
