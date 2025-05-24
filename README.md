@@ -207,3 +207,6 @@ public class Cinema {
 }
 
 ```
+
+## Trabalho em Grupo
+https://github.com/lucamusilva2014/Bertoti/tree/97d0abeda319cdea5c3b9a9dc2553038d1285af7/Trabalho_em_Grupo/tools-calling-fatecsjc
