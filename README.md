@@ -5,5 +5,5 @@ Este repositório reúne os conteúdos das disciplinas ministradas pelo professo
 ## 📚 Disciplinas Incluídas
 
 - **Engenharia de Software**
-- **Laboratorio de BD II**
+- **Laboratorio de BD III**
 
