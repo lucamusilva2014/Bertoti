@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Livros</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+    <h1>📚 Lista de Livros</h1>
+    <ul id="livro-list"></ul>
+
+    <h2>Adicionar Livro</h2>
+    <input type="text" id="nomeLivro" placeholder="Nome do livro" />
+    <button onclick="adicionarLivro()">Adicionar</button>
+</div>
+
+<script>
+    const apiUrl = 'http://localhost:8080/livros';
+
+    async function carregarLivros() {
+      const response = await fetch(apiUrl);
+      const livros = await response.json();
+
+      const lista = document.getElementById('livro-list');
+      lista.innerHTML = '';
+
+      livros.forEach(livro => {
+        const li = document.createElement('li');
+        li.textContent = `${livro.id}: ${livro.name}`;
+        lista.appendChild(li);
+      });
+    }
+
+    async function adicionarLivro() {
+      const nomeInput = document.getElementById('nomeLivro');
+      const nome = nomeInput.value.trim();
+      if (!nome) {
+        alert('Por favor, insira o nome do livro.');
+        return;
+      }
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: nome })
+      });
+
+      if (response.ok) {
+        nomeInput.value = '';
+        carregarLivros();
+      } else {
+        alert('Erro ao adicionar livro.');
+      }
+    }
+
+    carregarLivros();
+</script>
+
+</body>
+</html>
