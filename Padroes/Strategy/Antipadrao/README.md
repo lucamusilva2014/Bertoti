@@ -1,7 +1,8 @@
 # AntiPadrão
 
 
-![Antipadrão Strategy](https://github.com/user-attachments/assets/49228531-5773-40a1-b791-0f0566a4a101)
 
 
+
+![Antipadrão Strategy (2)](https://github.com/user-attachments/assets/f0e70aea-11e1-499a-a2ce-1ec43748df65)
 
