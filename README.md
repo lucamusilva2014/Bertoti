@@ -1,6 +1,6 @@
 # 📘 Repositório de Materiais — Disciplinas do Professor Bertoti
 
-Este repositório reúne os conteúdos das disciplinas ministradas pelo professor Bertoti ao longo do curso. os projetos solicitados em aulas
+Este repositório reúne os conteúdos das disciplinas ministradas pelo professor Bertoti ao longo do curso e  os projetos solicitados em aula.
 
 ## 📚 Disciplinas Incluídas
 
