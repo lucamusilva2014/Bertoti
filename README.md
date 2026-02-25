@@ -6,4 +6,6 @@ Este repositório reúne os conteúdos das disciplinas ministradas pelo professo
 
 - **Engenharia de Software**
 - **Laboratorio de BD III**
+- **Padrões de Projetos de Sistemas**
+- **Metodologia da Pesquisa Científico-Tecnológica**
 
