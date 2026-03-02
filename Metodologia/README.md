@@ -1,9 +1,10 @@
-# 📘 Repositório de Materiais — Disciplinas do Professor Bertoti
+# 3º Semestre Altave
 
-Este repositório reúne os conteúdos das disciplinas ministradas pelo professor Bertoti ao longo do curso. os projetos solicitados em aulas
+## Descrição
 
-## 📚 Disciplinas Incluídas
+## Tecnologias Utilizadas
 
-- **Engenharia de Software**
-- **Laboratorio de BD III**
+## Aprendizado
+
+##
 
